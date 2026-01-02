@@ -1,0 +1,139 @@
+# See dunst(5) for all configuration options
+
+[global]
+    ### Display ###
+
+    monitor = 0
+
+    follow = mouse
+
+    ### Geometry ###
+
+    width = 300
+
+    height = (0,300)
+
+    origin = top-right
+
+    offset = (10, 50)
+
+    scale = 0
+
+    notification_limit = 20
+
+    ### Progress bar ###
+
+    progress_bar = true
+
+    progress_bar_height = 10
+
+    progress_bar_frame_width = 1
+
+    progress_bar_min_width = 150
+
+    progress_bar_max_width = 300
+
+    progress_bar_corner_radius = 5
+
+    progress_bar_corners = all
+
+    icon_corner_radius = 0
+
+    icon_corners = all
+
+    indicate_hidden = yes
+
+    transparency = 0
+
+    separator_height = 2
+
+    padding = 8
+
+    horizontal_padding = 8
+
+    text_icon_padding = 0
+
+    frame_width = 2
+
+    frame_color = "#A7C080"
+
+    gap_size = 5
+
+    separator_color = frame
+
+    sort = yes
+
+    ### Text ###
+
+    font = Monospace 8
+
+    line_height = 0
+
+    markup = full
+
+    format = "<b>%a</b>\n<i>%s</i>\n%b"
+
+    alignment = left
+
+    vertical_alignment = center
+
+    show_age_threshold = -1
+
+    ellipsize = middle
+
+    ignore_newline = no
+
+    # Stack together notifications with the same content
+    stack_duplicates = false
+
+    hide_duplicate_count = false
+
+    show_indicators = yes
+
+    ### History ###
+
+    sticky_history = yes
+
+    history_length = 20
+
+    ### Misc/Advanced ###
+
+    dmenu = /usr/bin/dmenu -p dunst:
+
+    browser = /usr/bin/xdg-open
+
+    always_run_script = true
+
+    corner_radius = 5
+
+    corners = all
+
+    ignore_dbusclose = false
+
+    ### Wayland ###
+    # These settings are Wayland-specific. They have no effect when using X11
+
+    ### mouse
+
+    mouse_left_click = do_action
+    mouse_middle_click = none
+    mouse_right_click = close_current
+
+
+[urgency_low]
+    background = "#3C4841"
+    foreground = "#D3C6AA"
+    timeout = 10
+
+[urgency_normal]
+    background = "#272E33"
+    foreground = "#D3C6AA"
+    timeout = 10
+    override_pause_level = 30
+
+[urgency_critical]
+    background = "#4C3743"
+    foreground = "#D3C6AA"
+    frame_color = "#E67E80"
+    timeout = 0
+    override_pause_level = 60

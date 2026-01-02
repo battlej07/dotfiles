@@ -1,0 +1,110 @@
+:root {
+  /* Everforest Hard — main colors */
+  --fg: #d3c6aa;
+  --red: #e67e80;
+  --orange: #e69875;
+  --yellow: #dbbc7f;
+  --green: #a7c080;
+  --blue: #7fbbb3;
+  --aqua: #83c092;
+  --purple: #d699b6;
+
+  /* Backgrounds */
+  --bg-dim: #1e2326;
+  --bg0: #272e33;
+  --bg1: #2e383c;
+  --bg2: #374145;
+  --bg3: #414b50;
+  --bg4: #495156;
+  --bg5: #4f5b58;
+
+  /* Accent backgrounds */
+  --bg-red: #4c3743;
+  --bg-visual: #493b40;
+  --bg-yellow: #45443c;
+  --bg-green: #3c4841;
+  --bg-blue: #384b55;
+
+  /* Grays */
+  --gray0: #7a8478;
+  --gray1: #859289;
+  --gray2: #9da9a0;
+}
+
+* {
+  all: unset;
+}
+
+* {
+  font-family: monospace;
+  font-size: 18px;
+  color: var(--fg);
+}
+
+scrollbar {
+  opacity: 0;
+}
+
+.normal-icons {
+  -gtk-icon-size: 16px;
+}
+
+.large-icons {
+  -gtk-icon-size: 32px;
+}
+
+.box-wrapper {
+  background: var(--bg1);
+  padding: 20px;
+  border: 2px solid var(--green);
+}
+
+.search-container {
+  background: var(--bg0);
+  padding: 10px;
+}
+
+.input placeholder {
+  opacity: 0.5;
+}
+
+.input:focus,
+.input:active {
+  box-shadow: none;
+  outline: none;
+}
+
+child:selected .item-box * {
+  color: var(--yellow);
+}
+
+.item-box {
+  padding-left: 14px;
+}
+
+.item-text-box {
+  all: unset;
+  padding: 14px 0;
+}
+
+.item-subtext {
+  font-size: 0px;
+  min-height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.item-image {
+  margin-right: 14px;
+  -gtk-icon-transform: scale(0.9);
+}
+
+.current {
+  font-style: italic;
+}
+
+.keybind-hints {
+  background: var(--bg);
+  padding: 10px;
+  margin-top: 10px;
+}

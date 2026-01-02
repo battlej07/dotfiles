@@ -1,0 +1,10 @@
+theme = Everforest Dark Hard
+
+window-decoration = false
+
+font-family = JetBrainsMono Nerd Font
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+keybind = ctrl+v=paste_from_clipboard

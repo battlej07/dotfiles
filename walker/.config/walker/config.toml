@@ -1,0 +1,13 @@
+force_keyboard_focus = true
+selection_wrap = true
+theme = "Everforest"
+hide_action_hints = true
+
+[placeholders]
+"default" = { input = " Search...", list = "No Results" }
+
+[keybinds]
+quick_activate = []
+
+[columns]
+symbols = 1
