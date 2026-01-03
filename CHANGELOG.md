@@ -14,3 +14,4 @@
 - ashell
 - scripts for custom menu
 - tmux
+- yazi

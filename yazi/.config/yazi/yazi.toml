@@ -1,0 +1,4 @@
+[mgr]
+sort_by = "natural"
+
+linemode = "mtime"
