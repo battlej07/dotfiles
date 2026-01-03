@@ -13,3 +13,4 @@
 - walker
 - ashell
 - scripts for custom menu
+- tmux
