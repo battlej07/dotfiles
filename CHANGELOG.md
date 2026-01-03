@@ -1,5 +1,15 @@
 # DotFiles Changelog
 
+## v0.1.0
+
+### Added
+
+- waybar
+
+### Removed
+
+- ashell
+
 ## v0.0.1
 
 ### Added

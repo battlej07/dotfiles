@@ -1,0 +1,101 @@
+{
+  "reload_style_on_change": true,
+
+  "modules-left": ["custom/apps", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "pulseaudio",
+    "group/sys-tray",
+    "custom/notifications",
+    "power-profiles-daemon",
+    "custom/power",
+  ],
+
+  "custom/apps": {
+    "format": "󰣇 ",
+    "tooltip": false,
+    "on-click": "walker",
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "0",
+      "active": " ",
+    },
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "{:%b %d%t%H:%M}",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "default": [" ", " "],
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "tui-float.py wiremix",
+    "tooltip": false,
+  },
+
+  "group/sys-tray": {
+    "tooltip": false,
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-left-to-right": false,
+    },
+    "modules": ["custom/tray-collapsed", "tray"],
+  },
+
+  "custom/tray-collapsed": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "custom/notifications": {
+    "format": "{icon}",
+    "format-icons": {
+      "notification": " ",
+      "none": " ",
+      "paused-notification": " ",
+      "paused-none": " ",
+    },
+    "tooltip": false,
+    "return-type": "json",
+    "exec": "$HOME/.config/waybar/scripts/notifications.sh",
+    "interval": 1,
+    "on-click": "dunstctl set-paused toggle",
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip": false,
+    "format-icons": {
+      "default": " ",
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " ",
+    },
+  },
+
+  "custom/power": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "menu.py power",
+  },
+}
