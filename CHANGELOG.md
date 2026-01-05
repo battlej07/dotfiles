@@ -1,5 +1,11 @@
 # DotFiles Changelog
 
+## v0.2.0
+
+### Added
+
+- ideavim
+
 ## v0.1.0
 
 ### Added

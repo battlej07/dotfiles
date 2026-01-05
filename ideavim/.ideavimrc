@@ -1,0 +1,26 @@
+let mapleader=' '
+
+set scrolloff=5
+
+set incsearch
+set ignorecase
+set smartcase
+
+set number relativenumber
+set clipboard+=unnamed
+
+map Q gq
+
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+inoremap jk <Esc>
+map <leader>cf <Action>(ReformatCode)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cr <Action>(RenameElement)
+
+map L <Action>(NextTab)
+map H <Action>(PreviousTab)
+map <leader>b% <Action>(SplitVertically)
+map <leader>bd <Action>(CloseContent)
