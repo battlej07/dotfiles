@@ -1,5 +1,4 @@
 :root {
-  /* Everforest Hard — main colors */
   --fg: #d3c6aa;
   --red: #e67e80;
   --orange: #e69875;
@@ -9,7 +8,6 @@
   --aqua: #83c092;
   --purple: #d699b6;
 
-  /* Backgrounds */
   --bg-dim: #1e2326;
   --bg0: #272e33;
   --bg1: #2e383c;
@@ -18,14 +16,12 @@
   --bg4: #495156;
   --bg5: #4f5b58;
 
-  /* Accent backgrounds */
   --bg-red: #4c3743;
   --bg-visual: #493b40;
   --bg-yellow: #45443c;
   --bg-green: #3c4841;
   --bg-blue: #384b55;
 
-  /* Grays */
   --gray0: #7a8478;
   --gray1: #859289;
   --gray2: #9da9a0;
@@ -54,13 +50,14 @@ scrollbar {
 }
 
 .box-wrapper {
-  background: var(--bg1);
+  background: var(--bg0);
   padding: 20px;
+  border-radius: 6px;
   border: 2px solid var(--green);
 }
 
 .search-container {
-  background: var(--bg0);
+  background: var(--bg1);
   padding: 10px;
 }
 
