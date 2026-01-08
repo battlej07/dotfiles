@@ -42,14 +42,36 @@ tooltip {
   border-radius: 6px;
 }
 
-#pulseaudio {
+#battery {
   background-color: #272e33;
   padding: 5px 12px;
   margin: 5px 5px 0 5px;
   border-radius: 6px;
 }
 
+#battery {
+  background-color: #3c4841;
+  color: #a7c080;
+}
+
+#battery.warning {
+  background-color: #45443c;
+  color: #dbbc7f;
+}
+
+#battery.critical {
+  background-color: #493b40;
+  color: #e67e80;
+}
+
 #cpu {
+  background-color: #272e33;
+  padding: 5px 12px;
+  margin: 5px 5px 0 5px;
+  border-radius: 6px;
+}
+
+#pulseaudio {
   background-color: #272e33;
   padding: 5px 12px;
   margin: 5px 5px 0 5px;

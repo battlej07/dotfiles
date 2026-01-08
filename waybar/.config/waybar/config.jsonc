@@ -4,6 +4,7 @@
   "modules-left": ["custom/apps", "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
+    "battery",
     "cpu",
     "pulseaudio",
     "group/sys-tray",
@@ -40,6 +41,19 @@
   "clock": {
     "format": "{:%b %d%t%H:%M}",
     "tooltip": false,
+  },
+
+  "battery": {
+    "interval": 60,
+    "states": {
+      "full": 100,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "format-charging": " {capacity}%",
+    "max-length": 25,
   },
 
   "cpu": {
