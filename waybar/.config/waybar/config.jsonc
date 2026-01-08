@@ -4,6 +4,7 @@
   "modules-left": ["custom/apps", "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
+    "cpu",
     "pulseaudio",
     "group/sys-tray",
     "custom/notifications",
@@ -41,6 +42,12 @@
     "tooltip": false,
   },
 
+  "cpu": {
+    "interval": 10,
+    "format": "  {usage}%",
+    "max-length": 10,
+  },
+
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": " ",
@@ -65,6 +72,11 @@
   "custom/tray-collapsed": {
     "format": "",
     "tooltip": false,
+  },
+
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 6,
   },
 
   "custom/notifications": {
