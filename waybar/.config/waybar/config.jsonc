@@ -1,0 +1,131 @@
+{
+  "reload_style_on_change": true,
+  "modules-left": [
+    "custom/apps",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "battery",
+    "cpu",
+    "pulseaudio",
+    "group/sys-tray",
+    "custom/notifications",
+    "power-profiles-daemon",
+    "custom/power",
+  ],
+  "custom/apps": {
+    "format": "󰣇 ",
+    "tooltip": false,
+    "on-click": "~/.local/scripts/launcher",
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "0",
+      "active": " ",
+    },
+    "tooltip": false,
+  },
+  "clock": {
+    "format": "{:%b %d%t%H:%M}",
+    "tooltip": false,
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "full": 100,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "format-charging": " {capacity}%",
+    "max-length": 25,
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "  {usage}%",
+    "max-length": 10,
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "default": [
+        " ",
+        " "
+      ],
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "tui-float.py wiremix",
+    "tooltip": false,
+  },
+  "group/sys-tray": {
+    "tooltip": false,
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/tray-collapsed",
+      "tray"
+    ],
+  },
+  "custom/tray-collapsed": {
+    "format": "",
+    "tooltip": false,
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 6,
+  },
+  "custom/notifications": {
+    "format": "{icon}",
+    "format-icons": {
+      "notification": " ",
+      "none": " ",
+      "paused-notification": " ",
+      "paused-none": " ",
+    },
+    "tooltip": false,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/notifications.sh",
+    "interval": 1,
+    "on-click": "dunstctl set-paused toggle",
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip": false,
+    "format-icons": {
+      "default": " ",
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " ",
+    },
+  },
+  "custom/power": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "kitty --class 'powermenu' -e 'powermenu'"
+  },
+}
