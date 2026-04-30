@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [[ $# -eq 0 ]]; then
+  echo "Usage: floating-tui <command> [args...]" >&2
+  exit 1
+fi
+
+exec kitty \
+  --class floating-tui \
+  --title floating-tui \
+  -- "$@"

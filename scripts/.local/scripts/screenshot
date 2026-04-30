@@ -1,0 +1,22 @@
+#!/usr/bin/env fish
+
+set img ~/Pictures/Screenshots/(date '+%Y-%m-%d_%H:%M:%S').png
+
+grimblast -t png -f save area "$img"
+
+if test $status -ne 0
+    exit 0
+end
+
+wl-copy --type image/png <"$img"
+
+set action (notify-send "Screenshot taken", "Open in Satty to annotate?" \
+    --app-name="Screenshot" \
+    --action="annotate=Open in Satty" \
+  --wait)
+
+if test "$action" = annotate
+    satty --filename $img \
+        --output-filename "$img" \
+        --actions-on-escape save-to-file,exit
+end

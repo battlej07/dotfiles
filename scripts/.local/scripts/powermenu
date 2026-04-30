@@ -1,0 +1,16 @@
+#!/usr/bin/env fish
+
+set choice (echo -e "Lock\nShutdown\nSuspend\nRestart\nLogout" | fzf)
+
+switch $choice
+    case Lock
+        loginctl lock-session
+    case Suspend
+        systemctl suspend
+    case Shutdown
+        systemctl poweroff
+    case Restart
+        systemctl reboot
+    case Logout
+        notify-send "Möst mer mol irechte, he?"
+end

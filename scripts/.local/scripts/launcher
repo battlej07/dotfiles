@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+exec kitty \
+  --class sway-launcher-desktop \
+  -e sway-launcher-desktop
