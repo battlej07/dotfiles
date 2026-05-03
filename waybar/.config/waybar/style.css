@@ -35,6 +35,12 @@ tooltip {
   padding: 0 10px;
 }
 
+
+#workspaces button.active {
+  border-radius: 6px;
+  background-color: #3C4841;
+}
+
 #clock {
   background-color: #272e33;
   padding: 5px 12px;
