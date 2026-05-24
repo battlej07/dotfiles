@@ -14,12 +14,12 @@
     "group/sys-tray",
     "custom/notifications",
     "power-profiles-daemon",
-    "custom/power",
+    "custom/power"
   ],
   "custom/apps": {
     "format": "󰣇 ",
     "tooltip": false,
-    "on-click": "~/.local/scripts/launcher",
+    "on-click": "~/.local/scripts/launcher"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -34,21 +34,20 @@
       "7": "7",
       "8": "8",
       "9": "9",
-      "10": "0",
-      // "active": " ",
+      "10": "0"
     },
-    "tooltip": false,
+    "tooltip": false
   },
   "clock": {
     "format": "{:%b %d%t%H:%M}",
-    "tooltip": false,
+    "tooltip": false
   },
   "battery": {
     "interval": 60,
     "states": {
       "full": 100,
       "warning": 30,
-      "critical": 15,
+      "critical": 15
     },
     "format": "{icon} {capacity}%",
     "format-icons": [
@@ -59,12 +58,12 @@
       " "
     ],
     "format-charging": " {capacity}%",
-    "max-length": 25,
+    "max-length": 25
   },
   "cpu": {
     "interval": 10,
     "format": "  {usage}%",
-    "max-length": 10,
+    "max-length": 10
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -73,31 +72,31 @@
       "default": [
         " ",
         " "
-      ],
+      ]
     },
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "tui-float.py wiremix",
-    "tooltip": false,
+    "tooltip": false
   },
   "group/sys-tray": {
     "tooltip": false,
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 600,
-      "transition-left-to-right": false,
+      "transition-left-to-right": false
     },
     "modules": [
       "custom/tray-collapsed",
       "tray"
-    ],
+    ]
   },
   "custom/tray-collapsed": {
     "format": "",
-    "tooltip": false,
+    "tooltip": false
   },
   "tray": {
     "show-passive-items": true,
-    "spacing": 6,
+    "spacing": 6
   },
   "custom/notifications": {
     "format": "{icon}",
@@ -105,13 +104,13 @@
       "notification": " ",
       "none": " ",
       "paused-notification": " ",
-      "paused-none": " ",
+      "paused-none": " "
     },
     "tooltip": false,
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/notifications.sh",
     "interval": 1,
-    "on-click": "dunstctl set-paused toggle",
+    "on-click": "dunstctl set-paused toggle"
   },
   "power-profiles-daemon": {
     "format": "{icon}",
@@ -120,12 +119,12 @@
       "default": " ",
       "performance": " ",
       "balanced": " ",
-      "power-saver": " ",
-    },
+      "power-saver": " "
+    }
   },
   "custom/power": {
     "format": " ",
     "tooltip": false,
     "on-click": "kitty --class 'powermenu' -e 'powermenu'"
-  },
+  }
 }
