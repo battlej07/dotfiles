@@ -71,3 +71,19 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+
+-- Lid closed
+hl.bind("switch:on:Lid Switch", function()
+	local monitors = hl.get_monitors()
+
+	if #monitors == 1 then
+		hl.dispatch(hl.dsp.exec_cmd("loginctl lock-session"))
+	else
+		hl.monitor({ output = "eDP-1", disabled = true })
+	end
+end)
+
+-- Lid opened
+hl.bind("switch:off:Lid Switch", function()
+	hl.monitor({ output = "eDP-1", mode = "prefered", position = "auto", scale = 2, disabled = false })
+end)
