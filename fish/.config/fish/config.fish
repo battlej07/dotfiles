@@ -2,8 +2,6 @@ set -Ux EDITOR nvim
 set -Ux VISUAL nvim
 
 if status is-interactive
-    and not set -q TMUX
-    exec tmux new-session
 end
 
 function fish_greeting
